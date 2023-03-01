@@ -16,7 +16,7 @@ CRGB leds[NUM_LEDS];
 
 //define the digital pin that the LED strip is connected to
 // #define PIN 14
-#define SENSORPIN1 1
+#define SENSORPIN1 7
 #define SENSORPIN2 2
 #define SENSORPIN3 3
 #define SENSORPIN4 4
@@ -100,40 +100,40 @@ void loop() {
   // delay(10);
   
   if (sensorState1 && !lastState1) {
-    Serial.print(0);
-  } 
-  if (!sensorState1 && lastState1) {
-    Serial.print(1);
-  }
-  if (sensorState2 && !lastState2) {
-    Serial.print(0);
-  } 
-  if (!sensorState2 && lastState2) {
-    Serial.print(1);
-  }
-  if (sensorState3 && !lastState3) {
-    Serial.print(0);
-  } 
-  if (!sensorState3 && lastState3) {
-    Serial.print(1);
-  }
-  if (sensorState4 && !lastState4) {
-    Serial.print(0);
-  } 
-  if (!sensorState4 && lastState4) {
-    Serial.print(1);
-  }
-  if (sensorState5 && !lastState5) {
-    Serial.print(0);
-  } 
-  if (!sensorState5 && lastState5) {
-    Serial.print(1);
-  }
-  if (sensorState6 && !lastState6) {
     Serial.println(0);
   } 
-  if (!sensorState6 && lastState6) {
+  else if(!sensorState1 && lastState1) {
     Serial.println(1);
+  }
+  if (sensorState2 && !lastState2) {
+    Serial.println(2);
+  } 
+  else if(!sensorState2 && lastState2) {
+    Serial.println(3);
+  }
+  if (sensorState3 && !lastState3) {
+    Serial.println(4);
+  } 
+  else if(!sensorState3 && lastState3) {
+    Serial.println(5);
+  }
+  if (sensorState4 && !lastState4) {
+    Serial.println(6);
+  } 
+  else if(!sensorState4 && lastState4) {
+    Serial.println(7);
+  }
+  if(sensorState5 && !lastState5) {
+    Serial.println(8);
+  } 
+  else if(!sensorState5 && lastState5) {
+    Serial.println(9);
+  }
+  if (sensorState6 && !lastState6) {
+    Serial.println(10);
+  } 
+  else if(!sensorState6 && lastState6) {
+    Serial.println(11);
   }
   lastState1 = sensorState1;
   lastState2 = sensorState2;
